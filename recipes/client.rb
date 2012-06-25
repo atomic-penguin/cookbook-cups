@@ -20,8 +20,8 @@
 include_recipe "cups::default"
 
 # Make this safe to run client recipe on CUPS server
-if node[:cups][:servername] != node[:fqdn]
-  service node[:cups][:service] do
+if node['cups']['servername'] != node['fqdn']
+  service node['cups']['service'] do
     action [ :disable, :stop ]
   end
 
@@ -33,7 +33,7 @@ if node[:cups][:servername] != node[:fqdn]
   end
 
   remote_file "/etc/cups/lpoptions" do
-    source "http://#{node[:cups][:servername]}:631/admin/conf/lpoptions"
+    source "http://#{node['cups']['servername']}:631/admin/conf/lpoptions"
     owner "root"
     group "sys"
     mode 0664

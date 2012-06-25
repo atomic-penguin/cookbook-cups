@@ -10,7 +10,7 @@ Default client config is /etc/cups/client.conf.
 ATTRIBUTES
 ==========
 
-* cups[:servername]
+* cups['servername']
 
   - Sets the name of the cups server.
 
@@ -20,7 +20,7 @@ USAGE
 Create a cups role and override the following variable to set the ServerName
 in /etc/cups/client.conf.  The default value is simply, "cups".
 
-    cups[:servername] = "mucups.marshall.edu"
+    cups['servername'] = "mucups.marshall.edu"
 
 AUTHOR AND LICENSE
 ==================

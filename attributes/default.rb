@@ -17,8 +17,8 @@
 # limitations under the License.
 #
 
-case node[:platform] when "redhat","centos"
-  set[:cups][:service] = "cups"  
+case node['platform'] when "redhat","centos"
+  set['cups']['service'] = "cups"  
 end
 
-default[:cups][:servername] = "cups"
+default['cups']['servername'] = "cups"
