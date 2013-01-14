@@ -20,7 +20,7 @@ USAGE
 Create a cups role and override the following variable to set the ServerName
 in /etc/cups/client.conf.  The default value is simply, "cups".
 
-    cups['servername'] = "mucups.marshall.edu"
+    cups['servername'] = "cups.example.org"
 
 AUTHOR AND LICENSE
 ==================
